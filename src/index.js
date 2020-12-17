@@ -17,12 +17,13 @@ class uSecureStorage {
       decryptedData,
       jsonData;
     data = this.uni.getStorageSync(key);
-    deCompressData = LZString.decompressFromUTF16(data);
-    decryptedData = AES.decrypt(deCompressData, this.cipherKey).toString(CryptoJS.enc.Utf8);
 
-    if (!decryptedData) {
+    if (!data) {
       return data;
     }
+
+    deCompressData = LZString.decompressFromUTF16(data);
+    decryptedData = AES.decrypt(deCompressData, this.cipherKey).toString(CryptoJS.enc.Utf8);
 
     try {
       jsonData = JSON.parse(decryptedData);
