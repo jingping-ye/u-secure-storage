@@ -1,6 +1,6 @@
 {
   "name": "u-secure-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "uni-app安全存储工具(vuex)",
   "main": "./src/index.js",
   "scripts": {
