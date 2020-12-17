@@ -7,7 +7,7 @@ import PBKDF2 from "crypto-js/pbkdf2";
 class uSecureStorage {
   constructor() {
     this.uni = uni;
-    this.cipherKey = "";
+    this.cipherKey = "" || this.uni.getStorageSync("key");
   }
 
   // 获取数据
@@ -67,6 +67,7 @@ class uSecureStorage {
   set(key, value) {
     if (this.cipherKey.length === 0) {
       this.cipherKey = this.generateCipherKey();
+      this.uni.setStorageSync("key", this.cipherKey);
     }
     const strData = this.processData(value);
     this.uni.setStorageSync(key, strData);
