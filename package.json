@@ -1,0 +1,30 @@
+{
+  "name": "u-secure-storage",
+  "version": "1.0.0",
+  "description": "uni-app安全存储工具(vuex)",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jingping-ye/u-secure-storage.git"
+  },
+  "keywords": [
+    "uni-app",
+    "secure-storage",
+    "encryption",
+    "compress"
+  ],
+  "author": "jingping.ye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jingping-ye/u-secure-storage/issues"
+  },
+  "homepage": "https://github.com/jingping-ye/u-secure-storage#readme",
+  "dependencies": {
+    "crypto-js": "3.1.9-1",
+    "lz-string": "^1.4.4"
+  },
+  "devDependencies": {}
+}
